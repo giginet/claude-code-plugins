@@ -1,0 +1,12 @@
+{
+  "name": "giginet",
+  "owner": {
+    "name": "giginet"
+  },
+  "metadata": {
+    "description": "giginet's Claude Code plugin marketplace",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": []
+}
