@@ -8,5 +8,14 @@
     "version": "1.0.0",
     "pluginRoot": "./plugins"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "apple-swift-format",
+      "source": "./plugins/apple-swift-format",
+      "description": "Automatic Swift formatting and linting using apple/swift-format",
+      "version": "1.0.0",
+      "keywords": ["swift", "formatter", "linter", "apple"],
+      "category": "formatting"
+    }
+  ]
 }
