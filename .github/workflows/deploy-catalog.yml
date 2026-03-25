@@ -10,4 +10,4 @@ permissions:
 
 jobs:
   deploy:
-    uses: giginet/cc-plugin-catalog/.github/workflows/build-pages.yml@0
+    uses: giginet/cc-plugin-catalog/.github/workflows/build-pages.yml@v0
