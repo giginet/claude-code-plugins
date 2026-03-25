@@ -1,0 +1,13 @@
+name: Deploy Plugin Catalog
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    uses: giginet/cc-plugin-catalog/.github/workflows/build-pages.yml@0
