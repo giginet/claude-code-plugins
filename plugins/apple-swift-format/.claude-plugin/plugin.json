@@ -1,7 +1,7 @@
 {
   "name": "apple-swift-format",
   "description": "Automatic Swift formatting and linting using apple/swift-format",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "giginet"
   },
@@ -11,10 +11,21 @@
   "hooks": {
     "PostToolUse": [
       {
-        "matcher": "Edit|Write",
+        "matcher": "Edit|Write|MultiEdit",
         "hooks": [
           {
             "type": "command",
+            "if": "Edit(*.swift)",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/swift-format-format.sh"
+          },
+          {
+            "type": "command",
+            "if": "Write(*.swift)",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/swift-format-format.sh"
+          },
+          {
+            "type": "command",
+            "if": "MultiEdit(*.swift)",
             "command": "${CLAUDE_PLUGIN_ROOT}/hooks/swift-format-format.sh"
           }
         ]
@@ -22,10 +33,21 @@
     ],
     "PreToolUse": [
       {
-        "matcher": "Edit|Write",
+        "matcher": "Edit|Write|MultiEdit",
         "hooks": [
           {
             "type": "command",
+            "if": "Edit(*.swift)",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/swift-format-lint.sh"
+          },
+          {
+            "type": "command",
+            "if": "Write(*.swift)",
+            "command": "${CLAUDE_PLUGIN_ROOT}/hooks/swift-format-lint.sh"
+          },
+          {
+            "type": "command",
+            "if": "MultiEdit(*.swift)",
             "command": "${CLAUDE_PLUGIN_ROOT}/hooks/swift-format-lint.sh"
           }
         ]

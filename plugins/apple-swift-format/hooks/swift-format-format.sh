@@ -11,11 +11,6 @@ fi
 
 file_path=$(echo "$input" | jq -r '.tool_input.file_path // empty')
 
-# Only process .swift files
-if [[ "$file_path" != *.swift ]]; then
-  exit 0
-fi
-
 # Only process existing files
 if [ ! -f "$file_path" ]; then
   exit 0

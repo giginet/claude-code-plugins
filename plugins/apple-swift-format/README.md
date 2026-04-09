@@ -17,7 +17,7 @@ Integrates [apple/swift-format](https://github.com/swiftlang/swift-format) into 
 
 | Hook | Trigger | Behavior |
 |------|---------|----------|
-| PreToolUse | `Edit` / `Write` | Runs `swift-format lint`. Denies the action with lint errors as feedback if it fails. |
-| PostToolUse | `Edit` / `Write` | Runs `swift-format format --in-place` to auto-format the file. |
+| PreToolUse | `Edit` / `Write` / `MultiEdit` on `*.swift` | Runs `swift-format lint`. Denies the action with lint errors as feedback if it fails. |
+| PostToolUse | `Edit` / `Write` / `MultiEdit` on `*.swift` | Runs `swift-format format --in-place` to auto-format the file. |
 
 Both hooks only activate when a `.swift-format` file exists in the current working directory, and only process `.swift` files.
